@@ -39,7 +39,7 @@ Excluir produtos
 ### Rodando a aplicação
 1. **Clone o repositório**
    ```sh
-   git clone https://github.com/p1nherios/CRUD_Produtos.git
+   git clone https://github.com/p1nheiros/CRUD_Produtos.git
    ```
 2. **Acesse a pasta do projeto da API para configurar o banco de dados**
    ```sh
