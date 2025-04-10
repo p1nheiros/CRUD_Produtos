@@ -46,7 +46,7 @@ Excluir produtos
    cd CRUD_Produto\CrudProdutos
    -> No arquivo 'appsettings.json'
    -> Linha "DefaultConnection": "Server=nome_servidor;Database=nome_database;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"
-   Substitua o 'nome_servidor' e o 'nome_database' por um servidor e banco de dados existente no seu SQLServer.
+   Substitua o 'nome_servidor' e o 'nome_database' por um servidor e banco de dados existente no seu SQLServer (a conexão deve ser realizada por autenticação do windows)
    ```
 3. **Criação da tabela no banco de dados**
    ```sh
