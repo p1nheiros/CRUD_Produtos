@@ -1,0 +1,49 @@
+# Sistema Operacional
+*.DS_Store
+Thumbs.db
+
+# Arquivos do Visual Studio
+.vscode/
+*.vs/
+*.suo
+*.user
+*.cache
+*.dll
+*.pdb
+*.exe
+*.db
+
+# Build e Publicação
+bin/
+obj/
+out/
+publish/
+.Dockerfile.swp
+
+# Dependências
+node_modules/
+wwwroot/lib/
+
+# Configurações e Senhas Sensíveis
+appsettings.json
+appsettings.Development.json
+secrets.json
+
+# Logs e Debug
+*.log
+logs/
+*.bak
+*.swp
+
+# Arquivos de Pacotes e Lock
+*.lock
+project.lock.json
+
+# IDE e Ferramentas de Desenvolvimento
+.idea/
+*.iml
+*.sln.cache
+*.sln.ide
+
+# Docker
+docker-compose.override.yml

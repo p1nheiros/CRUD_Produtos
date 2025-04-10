@@ -1,0 +1,36 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Criar Produto";
+}
+
+<h2>Criar Produto</h2>
+
+<form asp-action="Criar" method="post">
+    <div class="form-group">
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descricao"></label>
+        <textarea asp-for="Descricao" class="form-control"></textarea>
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Preco"></label>
+        <input asp-for="Preco" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Preco" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Estoque"></label>
+        <input asp-for="Estoque" class="form-control" type="number" />
+        <span asp-validation-for="Estoque" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Criar</button>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</form>

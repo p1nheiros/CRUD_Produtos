@@ -1,0 +1,47 @@
+﻿@model List<Produto>
+
+@{
+    ViewData["Title"] = "Lista de Produtos";
+}
+
+<h2>Lista de Produtos</h2>
+<a asp-action="Criar" class="btn btn-primary">Novo Produto</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Titulo</td>
+                <td>@(produto.Preco.HasValue ? produto.Preco.Value.ToString("C") : "N/A")</td>
+                <td>@produto.Estoque</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@produto.Id" class="btn btn-warning">Editar</a>
+                    <a asp-action="Excluir" asp-route-id="@produto.Id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center mt-3">
+    @if (ViewBag.PaginaAtual > 1)
+    {
+        <a asp-action="Index" asp-route-pagina="@(ViewBag.PaginaAtual - 1)" class="btn btn-secondary">Anterior</a>
+    }
+
+    <span class="mx-2">Página @ViewBag.PaginaAtual de @ViewBag.TotalPaginas</span>
+
+    @if (ViewBag.PaginaAtual < ViewBag.TotalPaginas)
+    {
+        <a asp-action="Index" asp-route-pagina="@(ViewBag.PaginaAtual + 1)" class="btn btn-secondary">Próxima</a>
+    }
+</div>
