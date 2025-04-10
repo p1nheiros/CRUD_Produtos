@@ -32,6 +32,12 @@
         <span asp-validation-for="Estoque" class="text-danger"></span>
     </div>
 
+    <div class="form-group">
+        <label asp-for="Fotos"></label>
+        <input asp-for="Fotos" class="form-control" />
+        <span asp-validation-for="Fotos" class="text-danger"></span>
+    </div>
+
     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
 </form>

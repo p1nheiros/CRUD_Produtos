@@ -25,7 +25,7 @@ node_modules/
 wwwroot/lib/
 
 # Configurações e Senhas Sensíveis
-appsettings.json
+# appsettings.json
 appsettings.Development.json
 secrets.json
 
